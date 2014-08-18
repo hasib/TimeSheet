@@ -1,0 +1,194 @@
+﻿@html.extend("layout",function(model){
+
+	@html.block("scripts",function(model){
+<script src="/javascripts/projectView.js"></script>
+    })
+
+
+	@html.block("body",function(model){
+
+<div ng-app="projectView"> 
+<div> 
+<div ng-controller="projectViewController"> 
+
+
+<div class="jumbotron jumbotron2">
+    <h3>Projects</h3>
+    <hr style="border-color:black"/>
+    <p class="lead">Node.js is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="http://Nodejs.org" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+ <div class="row" ng-show="!showGrid">
+     <div class="col-md-12">
+        <div class="panel  panel-default">
+                    <div class="panel-heading">
+                      <span ng-show="!updateMode"> New Project</span><span ng-show="updateMode"> Update Project</span> 
+                            <div class="pull-right action-buttons">
+                                <div class="btn-group pull-right">
+                                    <!-- a href="/Projects/Create"><span class="glyphicon glyphicon-plus"></span>Add New Project</a-->
+                                </div>
+                            </div>
+                    </div>
+
+        <div class="panel-body">
+            <form role="form" class="form-horizontal" name="newNoteForm" ng-submit="save()">
+                <div class="form-group">
+                    
+                  </div>
+									<input type="Hidden"  ng-model="newProject.Id" name="Id"/>
+                   <div class="form-group">
+                    <label class="control-label col-lg-2">Name</label>
+                    <div class="col-lg-5">
+                      <input  type="text" name="Name" ng-model="newProject.Name" placeholder="Project Name" class="form-control" required maxlength="120"/> 
+                      <span ng-show="newNoteForm.Name.$error.required">Required</span>
+                    </div>
+                  </div>
+
+                   <div class="form-group">
+                    <label class="control-label col-lg-2">Start Date</label>
+                    <div class="col-lg-5">
+                     <input kendo-date-picker     name="StartDate"     k-format="'yyyy-MM-dd'" placeholder="yyyy-mm-dd"  ng-model="newProject.StartDate"       required     k-ng-model="newProject.StartDate" />
+  
+                      <span ng-show="newNoteForm.StartDate.$error.required">Required</span>
+                    </div>
+                  </div>
+                  
+                <div class="form-group">
+                    <label class="control-label col-lg-2">End Date</label>
+                    <div class="col-lg-5">
+                     <input kendo-date-picker    name="EndDate"   k-format="'yyyy-MM-dd'"    placeholder="yyyy-mm-dd"    ng-model="newProject.EndDate"    required        k-ng-model="newProject.EndDate" />
+  
+                      <span ng-show="newNoteForm.EndDate.$error.required">Required</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2">Note</label>
+                    <div class="col-lg-5">
+                      <textarea cols="30" rows="2" name="Note" ng-model="newProject.Note" placeholder="Your Note" class="form-control" required maxlength="120"></textarea>
+                      <span ng-show="newNoteForm.Note.$error.required">Required</span>
+                      <p>{{ 120 - newProject.Note.length }}</p>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2">Project Type</label>
+                    <div class="col-lg-5">
+                       <select kendo-combo-box selectedIndex="0" ng-model="newProject.ReportingFreqId">
+                          <option value="1">Weekly</option>
+                          <option value="2">Monthly</option>                          
+                       </select>
+                      <span ng-show="newNoteForm.ReportingFreqId.$error.required">Required</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-5">
+                      <input ng-hide="updateMode" type="submit" value="Save" class="btn btn-primary" ng-disabled="newNoteForm.$invalid">
+					  <input ng-hide="!updateMode"   value="Update"  ng-click="Update()" class="btn btn-primary" ng-disabled="newNoteForm.$invalid">
+                    </div>
+                  </div>
+                </form>
+        </div>
+        <div class="panel-footer">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>
+                      
+                        </h6>
+						 <a ng-click="showGrid=true;showForm=false" style="cursor:pointer"><span class="glyphicon  glyphicon-arrow-left"></span>Back</a>
+                    </div>
+                    <div class="col-md-6" >
+                      
+                    </div>
+                </div>
+            </div>
+
+</div>
+</div>
+    </div>
+<div class="row" ng-show="showGrid">
+     <div class="col-md-12">
+        <div class="panel  panel-default">
+                    <div class="panel-heading">
+                        Project List
+                            <div class="pull-right action-buttons">
+                                <div class="btn-group pull-right" style="cursor: pointer;" ng-click="showGrid=false;showForm=true">
+                                   <a><span class="glyphicon glyphicon-plus"></span>Add New Project </a>
+                                </div>
+                            </div>
+                    </div>
+            <div class="panel-body">
+                <table class="table">
+                    <tr>
+                        <th>
+                           Name
+                        </th>
+                        <th>
+                           StartDate
+                        </th>
+                        <th>
+                              EndDate 
+                        </th>
+                        <th>
+                            Note 
+                        </th>
+
+                        <th>
+                            Reporting FreqId
+                        </th>
+              
+                        <th></th>
+                    </tr>
+
+        
+                    <tr ng-repeat="project in projects">
+                        <td>
+                            {{ project.Name}}
+                        </td>
+                        <td>
+                            {{ project.StartDate | date:'yyyy-MM-dd'}}
+                        </td>
+                        <td>{{ project.EndDate | date:'yyyy-MM-dd'}}</td>
+                        <td>{{ project.Note}}</td>
+                        <td>{{ project.ReportingFreqId}}</td>
+              
+                        <td>
+                                 <div class="pull-right action-buttons">
+                                    
+							<a style="Cursor:Pointer" ng-click="Edit(project.Id)" class="span-icon"><span class="glyphicon glyphicon-pencil"></span></a>  
+                            <!-- a href="/Project/Edit/{{ project.Id}}" class="span-icon"><span class="glyphicon glyphicon-pencil"></span></a>  
+                            <a href="/Project/Details/{{ project.Id}}" class="span-icon"><span class="glyphicon glyphicon-list-alt"></span></a -->  
+                            <a style="Cursor:Pointer" ng-click="Delete(project)" class="span-icon"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </div>
+                           
+        
+                        </td>
+                    </tr>
+      
+
+                </table>
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>
+                            Total Count <span class="label label-info">{{mainProjects.length}}</span>
+                        </h6>
+                    </div>
+                    <div class="col-md-6" >
+                       <pagination total-items="bigTotalItems" style="float:right" max-size="maxSize" last-text="»" first-text="«" next-text="›" previous-text="‹"  boundary-links="false" direction-links="true"  class="pagination-sm" items-per-page="itemsPerPage" boundary-links="true" ng-model="currentPage" ng-change="pageChanged()"></pagination>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    </div>
+  </div>
+
+	})
+
+ 
+
+})
+

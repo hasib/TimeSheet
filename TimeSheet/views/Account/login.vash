@@ -1,0 +1,60 @@
+﻿@html.extend("layout",function(model){
+	@html.block("body",function(model){
+  <h2>Log in.</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <section id="loginForm">
+                     <form action="/Account/login" method="post" role="form" class="form-horizontal">
+                        
+                        <hr>
+                        <div class="form-group">
+                            <label for="UserName" class="col-md-2 control-label">User name</label>
+                            <div class="col-md-10">
+                                <input type="text" value="hasib" name="username"   data-val-required="The User name field is required." data-val="true" class="form-control">
+                                <span data-valmsg-replace="true" data-valmsg-for="username" class="field-validation-valid"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Password" class="col-md-2 control-label">Password</label>
+                            <div class="col-md-10">
+                                <input type="password" name="password"  value="1"  data-val-required="The Password field is required." data-val="true" class="form-control">
+                                <span data-valmsg-replace="true" data-valmsg-for="password" class="field-validation-valid"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10 ">
+                                <div class="checkbox">
+                                    
+                                    <label for="RememberMe"> <input type="checkbox" data-val="true" data-val-required="The Remember me? field is required." id="RememberMe" name="RememberMe" value="true"><input type="hidden" name="RememberMe" value="false">Remember me?</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" class="btn btn-default" value="Log in">
+                            </div>
+                        </div>
+                        <!--<p>
+                            <a href="2 Register.htm">Register</a> if you don't have a local account.
+                        </p>-->
+                    </form>
+                </section>
+            </div>
+            <div class="col-md-4">
+                <section id="socialLoginForm">
+
+                    <h4>Why do we use it?</h4>
+                    <hr>
+                    <div>
+                        <p>
+                            t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        </p>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+       
+	})
+
+}) 

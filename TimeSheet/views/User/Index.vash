@@ -1,0 +1,127 @@
+﻿@html.extend("layout",function(model){
+
+
+	@html.block("body",function(model){
+<div > 
+<div > 
+
+    <div class="jumbotron">
+        <h1>Node.js  </h1>
+        <p class="lead">Node.js is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+        <p><a href="http://Nodejs.org" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    </div>
+
+    <p>
+        <a href="/User/Create">Create New</a>
+    </p>
+    
+
+
+    <div class="row">
+     <div class="col-md-12">
+        <table class="table">
+            <tr>
+                <th>
+                   User ID
+                </th>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    MIddle Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+
+                <th>
+                    Employee
+                </th>
+                 <th>
+                    Contact
+                </th>
+                <th>
+                   Status
+                </th>
+                <th></th>
+            </tr>
+
+        @model.data.forEach(function(entry) {
+            <tr>
+                <td>
+                    @entry.UserName
+                </td>
+                <td>
+                    @entry.FirstName
+                </td>
+                <td>@entry.MiddleName</td>
+                <td>@entry.LastName</td>
+                <td>@entry.EmployeeId</td>
+                <td>@entry.ContactNo</td>
+                <td>@entry.UserStatus</td>
+                <td>
+           
+                    <a href="/User/Edit/@entry.Id">Edit</a> |
+                    <a href="/User/Details/@entry.Id">Details</a> |
+                    <a href="/User/Delete/@entry.Id">Delete</a>
+        
+                </td>
+            </tr>
+        })
+
+        </table>
+        </div>
+    </div>
+
+    <div class="row">
+    <div id="grid"></div>
+    <script>
+                    $(document).ready(function () {
+                        $("#grid").kendoGrid({
+                            dataSource: {
+                                type: "json",
+                                transport: {
+                                    read: "api/projects/"
+                                },
+                                pageSize: 5
+                            },
+                            //height: 240,
+                            groupable: false,
+                            sortable: true,
+                            scrollable: false,
+                            selectable: "multiple, row",
+                            pageable: {
+                                refresh: true,
+                                pageSizes: true,
+                                buttonCount: 5
+                            },
+                            columns: [{
+                                field: "Name",
+                                title: "Name",
+                                width: 200
+                            }, {
+                                field: "StartDate",
+                                title: "Address"
+                            }, {
+                                field: "Note",
+                                title: "Note"
+                            
+                            }]
+                        });
+                    });
+                </script>
+          </div>
+ </div>
+ </div>
+	})
+
+	@html.block("footer",function(model){
+	<hr/>
+	<p>copyright to @model.website</p>
+	<div>
+	hasidbfsdf
+	</div>
+	})
+
+})
+

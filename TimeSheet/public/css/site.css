@@ -1,0 +1,87 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+.trash { color:rgb(209, 91, 71); }
+.flag { color:rgb(248, 148, 6); }
+.panel-body { padding:0px; }
+.panel-footer .pagination { margin: 0; }
+.panel .glyphicon,.list-group-item .glyphicon { margin-right:5px; }
+.panel-body .radio, .checkbox { display:inline-block;margin:0px; }
+.panel-body input[type=checkbox]:checked + label { text-decoration: line-through;color: rgb(128, 144, 160); }
+.list-group-item:hover, a.list-group-item:focus {text-decoration: none;background-color: rgb(245, 245, 245);}
+.list-group { margin-bottom:0px; }
+
+.list-group-item-info {
+    background-color: #d9edf7;
+    color: #31708f;
+}
+.list-group-item-success {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+.list-group-item-warning {
+    background-color: #fcf8e3;
+    color: #8a6d3b;
+}
+
+a.list-group-item-danger {
+background-color: #f2dede;
+    color: #a94442;
+}
+
+.jumbotron2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+ 
+.navbar-inverse .navbar-brand {
+
+  color:rgb(245, 245, 245);
+  font-size: 22px;
+  
+}
+ 
+.span-icon {
+
+ padding-right:5px;
+  
+}

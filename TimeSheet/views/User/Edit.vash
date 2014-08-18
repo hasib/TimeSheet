@@ -1,0 +1,102 @@
+﻿@html.extend("layout",function(model){
+	@html.block("body",function(model){
+
+<h2>Update Customer</h2>
+<form novalidate="novalidate" action="/User/Edit" method="post">
+<input name="__RequestVerificationToken" value="N1Tj6e-dY57FSgIuwF72MMZ2Z7BPprbIg05H_isHEPJwA6zuVzczZjl4QkEGKn6VnhdFS_ktyXzA17XoVe7Z7EScxjyIkHSNwgEcnLhtVrI1" type="hidden">    <div class="form-horizontal">
+        <input  name="Id" value="@model.data.Id" type="hidden"/>
+        <hr>
+         <div class="form-group">
+            <label class="control-label col-md-2" for="UserName">User Name</label>
+            <div class="col-md-10">
+                <input class="text-box single-line" id="UserName" name="UserName" value="@model.data.UserName" type="text">
+                <span class="field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+         <div class="form-group">
+            <label class="control-label col-md-2" for="Password">Password</label>
+            <div class="col-md-10">
+                <input class="text-box single-line" id="Password" name="Password"  value="@model.data.Password" type="password">
+                <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="FirstName">First Name</label>
+            <div class="col-md-10">
+                <input class="text-box single-line" id="FirstName" name="FirstName" value="@model.data.FirstName" type="text">
+                <span class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="fName">Middle Name</label>
+            <div class="col-md-10">
+                <input class="text-box single-line" id="MiddleName" name="MiddleName" value="@model.data.MiddleName" type="text">
+                <span class="field-validation-valid" data-valmsg-for="MiddleName" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="LastName">Last Name</label>
+            <div class="col-md-10">
+                <input class="text-box single-line" id="LastName" name="LastName" value="@model.data.LastName" type="text">
+                <span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="EmployeeId">Employee Id</label>
+            <div class="col-md-10">
+                <input class="text-box single-line" id="EmployeeId" name="EmployeeId" value="@model.data.EmployeeId" type="text">
+                <span class="field-validation-valid" data-valmsg-for="EmployeeId" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="ContactNo">ContactNo</label>
+            <div class="col-md-10">
+                <input class="text-box single-line" id="ContactNo" name="ContactNo" value="@model.data.ContactNo" type="text">
+                <span class="field-validation-valid" data-valmsg-for="ContactNo" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="UserStatus">User Status</label>
+            <div class="col-md-10">
+                <input class="text-box single-line" id="UserStatus" name="UserStatus" value="@model.data.UserStatus" type="text">
+                <span class="field-validation-valid" data-valmsg-for="UserStatus" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Address">RoleId</label>
+            <div class="col-md-10">
+                <input class="text-box single-line" id="RoleId" name="RoleId" value="@model.data.RoleId" type="text">
+                <span class="field-validation-valid" data-valmsg-for="RoleId" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <!--<div class="form-group">
+            <label class="control-label col-md-2" for="Email">Email</label>
+            <div class="col-md-10">
+                <input class="text-box single-line" id="Email" name="Email" value="@model.data.email" type="text">
+                <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+            </div>
+        </div> -->
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input value="Update" class="btn btn-default" type="submit">
+            </div>
+        </div>
+    </div>
+</form>
+<div>
+    <a href="/User">Back to List</a>
+</div>
+ 
+    	})
+
+})

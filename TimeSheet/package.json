@@ -1,0 +1,20 @@
+{
+  "name": "TimeSheet",
+  "version": "0.0.0",
+  "description": "TimeSheet",
+  "main": "server.js",
+  "author": {
+    "name": "Aprosoft",
+    "email": ""
+  },
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "express": "3.4.4",
+    "jade": "*",
+    "mysql": "^2.4.2",
+    "passport": "^0.2.0",
+    "passport-local": "^1.0.0",
+    "stylus": "*",
+    "vash": "^0.7.12-1"
+  }
+}

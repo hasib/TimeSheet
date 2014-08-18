@@ -1,0 +1,104 @@
+﻿  @html.extend("layout",function(model){
+	@html.block("body",function(model){
+
+
+<h2>Details</h2>
+
+<div>
+    <h4>Customer Details</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+           User Name
+        </dt>
+
+        <dd>
+           @model.data.UserName
+        </dd>
+
+    </dl>
+
+   <dl class="dl-horizontal">
+        <dt>
+           First Name
+        </dt>
+
+        <dd>
+           @model.data.FirstName
+        </dd>
+
+    </dl>
+   <dl class="dl-horizontal">
+        <dt>
+           Middle Name
+        </dt>
+
+        <dd>
+           @model.data.MiddleName
+        </dd>
+
+    </dl>
+   <dl class="dl-horizontal">
+        <dt>
+           Last Name
+        </dt>
+
+        <dd>
+           @model.data.LastName
+        </dd>
+
+    </dl>
+  
+   <dl class="dl-horizontal">
+        <dt>
+           Employee Id 
+        </dt>
+
+        <dd>
+           @model.data.EmployeeId
+        </dd>
+
+    </dl>
+   <dl class="dl-horizontal">
+        <dt>
+             Contact No
+        </dt>
+
+        <dd>
+           @model.data.ContactNo
+        </dd>
+
+    </dl>
+   <dl class="dl-horizontal">
+        <dt>
+           User Status
+        </dt>
+
+        <dd>
+           @model.data.UserStatus
+        </dd>
+
+    </dl>
+
+    <dl class="dl-horizontal">
+        <dt>
+           RoleId
+        </dt>
+
+        <dd>
+           @model.data.RoleId
+        </dd>
+
+    </dl>
+
+    
+
+</div>
+<p>
+     <a href="/User/Edit/@model.data.Id">Edit</a>  |
+     <a href="/user">Back</a> 
+</p>
+
+	})
+
+})

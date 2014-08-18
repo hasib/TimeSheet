@@ -1,0 +1,361 @@
+﻿ @html.extend("layout",function(model){
+	@html.block("body",function(model){
+
+  <div class="jumbotron jumbotron2">
+            <h3>Welcome to Aprosoft Timesheet Application</h3>
+           <hr style="border-color:black"/>
+            <h3>@model.User.UserName</h3>
+            <h4>Sr. Software Engineer@model.User.RoleName</h4>
+            <p>Current Project Name: Project 1,Project 2</p>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel  panel-default">
+                    <div class="panel-heading">
+
+                        <a href="#"> Message Board</a>
+                    </div>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-success">Well done! You successfully submitted hours for August 02,2014. </a>
+                        <a href="#" class="list-group-item list-group-item-info">Cras sit amet nibh libero</a>
+                        <a href="#" class="list-group-item list-group-item-warning">You have saved timesheed <span class="badge">2</span></a>
+                        <a href="#" class="list-group-item list-group-item-danger alert alert-danger">You have a comment on August 09,2014 <span class="badge">3</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel  panel-default">
+                    <div class="panel-heading">
+
+                        <a href="#">My Account</a>
+                    </div>
+                    <div class="  well-sm">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                                <img class="img-rounded img-responsive" alt="" src="http://placehold.it/150x150">
+                            </div>
+                            <div class="col-sm-6 col-md-8">
+                              
+                             
+                                <dl class="dl-horizontal" style=" margin-bottom: 0px;">
+                                    <dt style="width:90px">
+                                        Name
+                                    </dt>
+                                    <dd style="margin-left: 100px">
+                                        Your Name
+                                    </dd>
+                                    <dt style="width:90px" >
+                                        Joining date
+                                    </dt>
+                                    <dd style="margin-left: 100px">
+                                        08/09/2014
+                                    </dd>
+                                    <dt style ="width:90px">
+                                        Designation
+                                    </dtstyle>
+                                    <dd style="margin-left: 100px">
+                                        Software Engineer
+                                    </dd>
+                                    <dt style="width:90px">
+                                        Skill
+                                    </dt>
+                                    <dd style="margin-left:100px">
+                                        Asp.net, Node.js, Angular.js
+                                    </dd>
+                                    <dt style="width:90px">
+                                        Email
+                                    </dt>
+                                    <dd style="margin-left:100px">
+                                        :yourname@aprosoft.com
+                                    </dd>
+                                    <dt style="width:90px">
+                                        Skype
+                                    </dt>
+                                    <dd style="margin-left:100px">
+                                        yourname.aprosoft
+                                    </dd> 
+                                     
+                                </dl>
+                                 
+                                <!-- Split button -->
+                                <!--<div class="btn-group">
+                                    <button class="btn btn-primary" type="button">
+                                        Social
+                                    </button>
+                                    <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" type="button">
+                                        <span class="caret"></span><span class="sr-only">Social</span>
+                                    </button>
+                                    <ul role="menu" class="dropdown-menu">
+                                        <li><a href="#">Twitter</a></li>
+                                        <li><a href="https://plus.google.com/+Jquery2dotnet/posts">Google +</a></li>
+                                        <li><a href="https://www.facebook.com/jquery2dotnet">Facebook</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Github</a></li>
+                                    </ul>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+         <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+
+                            <a href="4 Project 1.htm"> Project 1 </a>
+                            <div class="pull-right action-buttons">
+                                <div class="btn-group pull-right">
+                                    <a href="5 Create Time Sheet.htm"><span class="glyphicon glyphicon-plus"></span>Add New TimeSheed</a>
+                                    <!--<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                        <span class="glyphicon glyphicon-cog" style="margin-right: 0px;"></span>
+                                    </button>
+                                    <ul class="dropdown-menu slidedown">
+                                        <li><a href="4 Project 1.htm"><span class="glyphicon glyphicon-plus"></span>Add New TimeSheed</a></li>
+
+                                    </ul>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="checkbox">
+
+                                        <label for="checkbox">
+                                            August 02, 2014
+                                        </label>
+                                        <label for="checkbox">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </label>
+
+                                        <label for="checkbox">
+                                            32 hours
+                                        </label>
+
+                                    </div>
+                                    <div class="pull-right action-buttons">
+                                        <a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+
+                                        <a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="checkbox">
+
+                                        <label for="checkbox">
+                                            August 09, 2014
+                                        </label>
+                                        <label style="width:50px">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </label>
+
+                                        <label for="checkbox">
+                                            40 hours
+                                        </label>
+                                    </div>
+                                    <div class="pull-right action-buttons">
+                                        <a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+
+                                        <a href="#" class="flag"><span class="glyphicon glyphicon-flag" style=" color: red;"></span></a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="checkbox">
+
+                                        <label for="checkbox">
+                                            August 16, 2014
+                                        </label>
+                                        <label style="width:50px">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </label>
+
+                                        <label for="checkbox">
+                                            40 hours
+                                        </label>
+                                    </div>
+                                    <div class="pull-right action-buttons">
+                                        <a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+
+                                        <a href="#" class="flag"><span class="glyphicon glyphicon-flag" style=" color: green;"></span></a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="checkbox">
+
+                                        <label for="checkbox">
+                                            August 23, 2014
+                                        </label>
+                                        <label style="width:50px">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </label>
+
+                                        <label for="checkbox">
+                                            40 hours
+                                        </label>
+                                    </div>
+                                    <div class="pull-right action-buttons">
+                                        <a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+
+                                        <a href="#" class="flag"><span class="glyphicon glyphicon-flag" style=" color: green;"></span></a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>
+                                        Total Count <span class="label label-info">25</span>
+                                    </h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="pagination pagination-sm pull-right">
+                                        <li class="disabled"><a href="javascript:void(0)">«</a></li>
+                                        <li class="active"><a href="javascript:void(0)">1 <span class="sr-only">(current)</span></a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="javascript:void(0)">»</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+
+                            <a href="4 Project 1.htm"> Project 2 </a>
+                            <div class="pull-right action-buttons">
+                                <div class="btn-group pull-right">
+                                    <a href="5 Create Time Sheet.htm"><span class="glyphicon glyphicon-plus"></span>Add New TimeSheed</a>
+                                    <!--<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                        <span class="glyphicon glyphicon-cog" style="margin-right: 0px;"></span>
+                                    </button>
+                                    <ul class="dropdown-menu slidedown">
+                                        <li><a href="4 Project 1.htm"><span class="glyphicon glyphicon-plus"></span>Add New TimeSheed</a></li>
+
+                                    </ul>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="checkbox">
+
+                                        <label for="checkbox">
+                                            August 02, 2014
+                                        </label>
+                                        <label for="checkbox">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </label>
+
+                                        <label for="checkbox">
+                                            12 hours
+                                        </label>
+
+                                    </div>
+                                    <div class="pull-right action-buttons">
+                                        <a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+
+                                        <a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="checkbox">
+
+                                        <label for="checkbox">
+                                            August 09, 2014
+                                        </label>
+                                        <label style="width:50px">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </label>
+
+                                        <label for="checkbox">
+                                            4 hours
+                                        </label>
+                                    </div>
+                                    <div class="pull-right action-buttons">
+                                        <a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+
+                                        <a href="#" class="flag"><span class="glyphicon glyphicon-flag" style=" color: green;"></span></a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="checkbox">
+
+                                        <label for="checkbox">
+                                            August 16, 2014
+                                        </label>
+                                        <label style="width:50px">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </label>
+
+                                        <label for="checkbox">
+                                            8 hours
+                                        </label>
+                                    </div>
+                                    <div class="pull-right action-buttons">
+                                        <a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+
+                                        <a href="#" class="flag"><span class="glyphicon glyphicon-flag" style=" color: green;"></span></a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="checkbox">
+
+                                        <label for="checkbox">
+                                            August 23, 2014
+                                        </label>
+                                        <label style="width:50px">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </label>
+
+                                        <label for="checkbox">
+                                            15 hours
+                                        </label>
+                                    </div>
+                                    <div class="pull-right action-buttons">
+                                        <a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+
+                                        <a href="#" class="flag"><span class="glyphicon glyphicon-flag" style=" color: green;"></span></a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>
+                                        Total Count <span class="label label-info">25</span>
+                                    </h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="pagination pagination-sm pull-right">
+                                        <li class="disabled"><a href="javascript:void(0)">«</a></li>
+                                        <li class="active"><a href="javascript:void(0)">1 <span class="sr-only">(current)</span></a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="javascript:void(0)">»</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+	})
+
+})
